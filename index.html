@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+</head>
+
+<body>
+    <main class="project">
+        <section class="project__section">
+            <article class="project__content">
+                <header class="project__header">
+                    <h1 class="project__title">COMPLETED <br>PROJECTS</h1>
+                    <div class="project__title-line"></div>
+                    <div class="project__title-attribute"></div>
+                </header>
+                <p class="project__description">
+                    Only a small part of the work performed by our company is presented on the site.
+                    For 14 years on in the construction market we have made happy more than 1000 families
+                </p>
+                <div class="project__details">
+                    <div class="project__details-left">
+                        <div class="project__detail-item">
+                            <h3 class="project__detail-title">CITY :</h3>
+                            <p class="project__detail-text" id="city">Rostov-on-Don<br>LCD admiral</p>
+                        </div>
+                        <div class="project__detail-item">
+                            <h3 class="project__detail-title" id="repair__time-title">Repair time :</h3>
+                            <p class="project__detail-text" id="repair-time">3.5 months</p>
+                        </div>
+                    </div>
+                    <div class="project__details-right">
+                        <div class="project__detail-item">
+                            <h3 class="project__detail-title">apartment area :</h3>
+                            <p class="project__detail-text" id="apartment-area">81 m²</p>
+                        </div>
+                        <div class="project__detail-item">
+                            <h3 class="project__detail-title">REPAIR COST :</h3>
+                            <p class="project__detail-text" id="repair-cost">Upon request</p>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="project__navigation" aria-label="Project navigation">
+                    <button aria-label="Previous project" class="project__nav-arrow"></button>
+                    <span class="project__nav-dot project__nav-dot--active" aria-label="Current slide"></span>
+                    <span class="project__nav-dot" aria-label="Slide 2"></span>
+                    <span class="project__nav-dot" aria-label="Slide 3"></span>
+                    <button aria-label="Next project" class="project__nav-arrow"></button>
+                </nav>
+            </article>
+
+            <figure class="project__image-container">
+                <div class="top__image">
+                    <span id="project1" class="top__image-name">Rostov-on-Don, Admiral</span>
+                    <span id="project2" class="top__image-name">Sochi Thieves</span>
+                    <span id="project3" class="top__image-name">Rostov-on-Don Patriotic</span>
+                </div>
+                <img src="img/image_slider1.svg" alt="Interior of completed project" class="project__img" id="project-image">
+            </figure>
+        </section>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

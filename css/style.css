@@ -1,0 +1,322 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.project {
+    font-family: "NunitoSans", sans-serif;
+    background-color: #131313;
+    color: #fff;
+    gap: 0px;
+    opacity: 1;
+    padding: 40px;
+    width: 100vw; 
+    height: 100vh; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden; /* Скрыть переполнение */
+
+}
+
+.project__section {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.project__content {
+    max-width: 100%;
+    margin: 107px 134px 123px 134px;
+}
+
+
+.project__header {
+    position: relative;
+}
+
+.project__title-line {
+    width: 92px;
+    height: 1px;
+    background-color: #E3B873; 
+    position: absolute;
+    left: 161px; /* Расстояние слева от заголовка */
+    top: 51px;  /* Расстояние вниз от заголовка */
+}
+
+
+.project__title {
+    font-family: "YesevaOne", sans-serif;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 37.42px;
+    letter-spacing: -0.07em;
+    text-align: left;
+    color: #E3B873;
+    margin-bottom: 20px;
+}
+
+.project__description {
+    margin-bottom: 20px;
+    text-align: left;
+    font-weight: 400;
+    font-size: 14px;
+    max-width: 500px;
+    line-height: 27px; 
+    line-height: 1.9096;
+    color: #fff;
+}
+
+
+
+.project__details {
+    display: flex;
+    gap: 120px; 
+    
+    
+}
+
+
+.project__detail-item {
+    margin-bottom: 60px;
+    white-space: nowrap;
+    
+
+}
+
+.project__details-left,
+.project__details-right {
+    display: flex;
+    flex-direction: column; 
+    margin-bottom: 79px;
+}
+
+.project__details-right .project__detail-item:last-child {
+    margin-top: 20px; 
+}
+
+.project__detail-title {
+    font-family: "YesevaOne", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.386;
+    letter-spacing: -0.07em;
+    text-align: left;
+    color: #E3B873;
+    text-transform: uppercase;
+    min-width: 100px; 
+}
+
+.project__details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+.project__detail-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 200px; 
+    height: 80px;
+    margin-top: 20px;
+}
+
+/* другой способ сделать так чтобы не дергался экран */
+/* #repair__time-title {
+    padding-top: 20px;
+} */
+
+
+
+.project__detail-text {
+    font-weight: 400;
+    font-size: 13px;
+
+    /* line-height: 21px; */ 
+    line-height: 1.6368;
+    color: #fff;
+    margin-top:  9px;
+
+}
+
+.project__navigation {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+
+.project__nav-arrow {
+    position: relative;
+    background: none;
+    border: none;
+    width: 41px; 
+    height: 14px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0;
+}
+
+
+.project__nav-arrow::before {
+    content: '';
+    position: absolute;
+    width: 41px;
+    height: 2px;
+    background-color: white;
+    top: 6px; /* Центровка линии в основе стрелки */
+}
+
+.project__nav-arrow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 8px;
+    /* right: -8px; */
+    height: 14px;
+    background-color: transparent;
+    background-color: white;
+   
+}
+
+
+.project__nav-arrow:first-of-type::after {
+    right: 36px; /* Правый наконечник стрелки */
+    mask: url('data:image/svg+xml,<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.45369 13.276L3.80191e-05 7.0228L6.45369 0.769547L7.37494 1.66219L1.84253 7.0228L7.37494 12.3834L6.45369 13.276Z" fill="white" /></svg>') no-repeat center;
+    mask-size: contain;
+}
+
+.project__nav-arrow:last-of-type::after {
+    left: 36px; /* Левый наконечник стрелки */
+    transform: rotate(180deg); /* Поворот для направления в другую сторону */
+    mask: url('data:image/svg+xml,<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.45369 13.276L3.80191e-05 7.0228L6.45369 0.769547L7.37494 1.66219L1.84253 7.0228L7.37494 12.3834L6.45369 13.276Z" fill="white" /></svg>') no-repeat center;
+    mask-size: contain;
+}
+
+
+.project__nav-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 30px;
+    background-color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 8.5px; /* Половина от общего отступа в 17px */
+}
+
+.project__nav-dot--active {
+    background-color: #E3B873;
+}
+
+
+.project__image {
+    max-width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 482px; /* Установите фиксированную высоту */
+}
+
+
+
+/* CSS для нового контейнера и топового текста */
+.project__image-container {
+    font-family: "YesevaOne", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #e3b873;
+    position: relative;
+    /* max-width: 100%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 134.55px;
+    
+}
+
+.project__img {
+    max-width: 100%; 
+    height: auto;
+}
+
+.top__image {
+    position: absolute;
+    top: -45.36px; 
+    display: flex;
+    gap: 60.5px; /* Примерный отступ между текстами */
+    white-space: nowrap;
+    color: #E3B873; /* Цвет текста */
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #e3b873;
+
+
+}
+
+.top__image-name {
+    color: gray; /* Цвет для неактивных элементов */
+    cursor: pointer;
+    position: relative;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.top__image-name.active {
+    color: #E3B873; /* Цвет для активного элемента */
+}
+
+/* Нижнее подчёркивание для активного элемента */
+.top__image-name.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6.68px; /* Отступ в 6.68px */
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #E3B873; /* Цвет линии совпадает с цветом активного элемента */
+}
+
+
+.project__nav-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #555;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.project__nav-dot.active {
+    background-color: #fff; /* Цвет активной кнопки */
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
